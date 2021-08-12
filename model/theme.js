@@ -1,5 +1,4 @@
 // 顶部的主题图片业务对象:
-import { config } from "../config/Config";
 import { Http } from "../utils/http";
 
 export class Theme {
