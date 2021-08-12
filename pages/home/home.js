@@ -17,11 +17,10 @@ Page({
      * 
      */
     // ES6的写法:
-    onLoad: function (options) {
-        Theme.getHomeLocationA((data) => {
-            this.setData({
-                topTheme:data[0]
-            });
+    onLoad: async function (options) {
+        const data = await Theme.getHomeLocationA();
+        this.setData({
+            topTheme: data[0],
         });
     },
 

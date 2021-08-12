@@ -8,7 +8,7 @@ import { promisic } from "./util";
 export class Http {
     static async request({ url, data, method = 'GET' }) {
         // 入参为函数名 , 后面接小括弧代表调用 promisic 函数 , 里面装着的是wx.request所需要的参数
-        await promisic(wx.request)({
+        return await promisic(wx.request)({
             url: `${config.apiBaseUrl}${url}`,
             data: data,
             method: method,

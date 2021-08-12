@@ -1,16 +1,13 @@
-// 顶部的主题图片业务对象:
 import { Http } from "../utils/http";
 
+// 获取首页主题数据:
 export class Theme {
-    // 获取首页主题数据:
-    static getHomeLocationA(callback) {
-        Http.request({
+    static async getHomeLocationA() {
+        const result = await Http.request({
             url: 'theme/by/names',
             data: { names: 't-1' },
-            callback: (data) => {
-                callback(data);
-            },
             method: 'GET'
         });
+        return result.data;
     }
 }
