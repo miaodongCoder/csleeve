@@ -1,5 +1,6 @@
 // pages/home/home.js
 
+import { Banner } from "../../model/banner";
 import { Theme } from "../../model/theme"
 
 
@@ -9,7 +10,8 @@ Page({
      */
     data: {
         // 顶部图片:
-        topTheme:null,
+        themeA:null,
+        bannerB : []
     },
 
     /**
@@ -17,10 +19,16 @@ Page({
      * 
      */
     // ES6的写法:
-    onLoad: async function (options) {
-        const data = await Theme.getHomeLocationA();
+    async onLoad (options) {
+        this.initAllData();  
+    },
+
+    async initAllData () {
+        const themeA = await Theme.getHomeLocationA();
+        const bannerB = await Banner.getHomeLocationB();
         this.setData({
-            topTheme: data[0],
+            themeA  : themeA[0],
+            bannerB : bannerB,
         });
     },
 
