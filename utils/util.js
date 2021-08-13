@@ -9,6 +9,7 @@
  export const promisic = function (func) {
     return function (params = {}) {
         return new Promise((resolve, reject) => {
+            // 函数可以赋值给一个常量:
             const args = Object.assign(params, {
                 success: (res) => {
                     resolve(res);
@@ -17,8 +18,7 @@
                     reject(error);
                 }
             });
-            // 调用接收的那个函数 , 同时把args参数传递进去:
-            // 如wx.request()这个方法:
+            // 直接将函数作为入参传递到 func 方法种并调用 func 方法:
             func(args);
         });
     };
