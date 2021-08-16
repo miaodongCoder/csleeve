@@ -1,14 +1,26 @@
 {
   "name": "c-sleeve",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "慕课网Java全栈工程师课程风袖小程序代码",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "miaodong",
   "license": "ISC",
   "dependencies": {
     "lin-ui": "~0.6.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://miaodongCoder@github.com/miaodongCoder/csleeve.git"
+  },
+  "keywords": [
+    "风袖"
+  ],
+  "bugs": {
+    "url": "https://github.com/miaodongCoder/csleeve/issues"
+  },
+  "homepage": "https://github.com/miaodongCoder/csleeve#readme"
 }
