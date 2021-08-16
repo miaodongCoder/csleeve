@@ -6,7 +6,6 @@ export class Theme {
         const result = await Http.request({
             url: 'theme/by/names',
             data: { names: 't-1' },
-            method: 'GET'
         });
         return result.data;
     }

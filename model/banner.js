@@ -5,7 +5,6 @@ export class Banner {
     static async getHomeLocationB() {
         const result = await Http.request({
             url: 'banner/name/b-1',
-            method: 'GET'
         });
         return result.data;
     }
