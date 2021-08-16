@@ -1,5 +1,5 @@
 {
     "usingComponents": {
-        "s-category-grid": "/components/category/index"
+        "s-category-grid": "/components/category-grid/index"
     }
 }

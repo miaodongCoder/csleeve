@@ -2,7 +2,7 @@
 
 import { Banner } from "../../model/banner";
 import { Theme } from "../../model/theme"
-
+import { Category } from "../../model/categroy"
 
 Page({
     /**
@@ -10,8 +10,9 @@ Page({
      */
     data: {
         // 顶部图片:
-        themeA:null,
-        bannerB : []
+        themeA: null,
+        bannerB: [],
+        gridC: [],
     },
 
     /**
@@ -19,16 +20,18 @@ Page({
      * 
      */
     // ES6的写法:
-    async onLoad (options) {
-        this.initAllData();  
+    async onLoad(options) {
+        this.initAllData();
     },
 
-    async initAllData () {
-        const themeA = await Theme.getHomeLocationA();
-        const bannerB = await Banner.getHomeLocationB();
+    async initAllData() {
+        const themeA    = await Theme.getHomeLocationA();
+        const bannerB   = await Banner.getHomeLocationB();
+        const gridC     = await Category.getHomeGridCategory();
         this.setData({
-            themeA  : themeA[0],
-            bannerB : bannerB,
+            themeA: themeA[0],
+            bannerB: bannerB,
+            gridC: gridC,
         });
     },
 
