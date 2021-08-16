@@ -25,9 +25,9 @@ Page({
     },
 
     async initAllData() {
-        const themeA    = await Theme.getHomeLocationA();
-        const bannerB   = await Banner.getHomeLocationB();
-        const gridC     = await Category.getHomeGridCategory();
+        const themeA = await Theme.getHomeLocationA();
+        const bannerB = await Banner.getHomeLocationB();
+        const gridC = await Category.getHomeGridCategory();
         this.setData({
             themeA: themeA[0],
             bannerB: bannerB,
