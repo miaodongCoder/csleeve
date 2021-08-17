@@ -27,16 +27,27 @@ Page({
     },
 
     async initAllData() {
-        const themeA = await Theme.getHomeLocationA();
+        const themes = await Theme.getThemes();
+        // find 函数: return 返回一个匹配的条件
+        const themeA = themes.find((theme) => theme.name === 't-1');
+
+        
+
+
+
+
         const bannerB = await Banner.getHomeLocationB();
         const gridC = await Category.getHomeGridCategoryLocationC();
         const activityD = await Activity.getHomeActivityLocationD();
 
         this.setData({
-            themeA: themeA[0],
+            themeA: themeA,
             bannerB: bannerB,
             gridC: gridC,
             activityD: activityD,
+            themeE: themes[1],
+            themeF: themes[2],
+            themeH: themes[3],
         });
     },
 
