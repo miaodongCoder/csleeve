@@ -1,6 +1,7 @@
-<view>
+<view class="container">
     <!-- 1.顶部image图片组件:-->
     <image class="top-theme" src="{{themeA.entrance_img}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    <!-- 2.轮播图 -->
     <swiper class="swiper" indicator-dots="true " indicator-active-color="#157658" autoplay="true" interval="3000" duration="1000" circular="true" vertical="{{false}}"
     previous-margin="true" display-multiple-items="1">
         <block wx:for="{{bannerB.items}}">
@@ -9,6 +10,9 @@
             </swiper-item>
         </block>
     </swiper>
+    <!-- 3.六宫格 -->
     <s-category-grid grid="{{gridC}}"></s-category-grid>
-
+    <!-- 4.优惠券图片 -->
+    <image class="activity" src="{{activityD.entrance_img}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    
 </view>
