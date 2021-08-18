@@ -5,14 +5,16 @@ import { Http } from "../utils/http";
  * 
  */
 export class Theme {
-    locationA = 't-1';
-    locationE = 't-2';
-    locationF = 't-3';
-    locationH = 't-4';
+    // 静态属性:
+    static locationA = 't-1';
+    static locationE = 't-2';
+    static locationF = 't-3';
+    static locationH = 't-4';
+    // 实例属性:
     themes = [];
 
     async getThemes() {
-        const names = `${this.locationA},${this.locationE},${this.locationF},${this.locationH}`;
+        const names = `${Theme.locationA},${Theme.locationE},${Theme.locationF},${Theme.locationH}`;
         console.log('names = ' + names);
         const result = await Http.request({
             url: 'theme/by/names',
@@ -22,19 +24,11 @@ export class Theme {
     }
 
     async getHomeLocationA() {
-        return this.findDataWithLocation(this.locationA);
+        return this.findDataWithLocation(Theme.locationA);
     }
 
     async getHomeLocationE() {
-        return this.findDataWithLocation(this.locationE);
-    }
-
-    async getHomeLocationF() {
-        return this.findDataWithLocation(this.locationF);
-    }
-
-    async getHomeLocationH() {
-        return this.findDataWithLocation(this.locationH);
+        return this.findDataWithLocation(Theme.locationE);
     }
 
     /**
@@ -44,6 +38,21 @@ export class Theme {
      */
     async findDataWithLocation(param) {
         return this.themes.find(theme => { return theme.name === param });
+    }
+
+    /**
+     * 获取 E 位置scrollView 的数据:
+     * @returns 
+     */
+    static async getHomeLocationESpu () {
+        return Theme.getThemeSpuByNames(Theme.locationE);
+    }
+
+    static async getThemeSpuByNames (name) {
+        const result = await Http.request({
+            url: `theme/name/${name}/with_spu`,
+        });
+        return result.data;
     }
 }
 

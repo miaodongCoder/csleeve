@@ -28,26 +28,14 @@ Page({
     },
 
     async initAllData() {
-        // const themes = await Theme.getThemes();
-        // find 函数: return 返回一个匹配的条件
-        // const themeA = themes.find((theme) => theme.name === 't-1');
-
-        // const theme = new Theme();
-        // await theme.getThemes(); // 请求接口~
-        // const themeA =  theme.getHomeLocationA();
-        // const themeE =  theme.getHomeLocationE();
-
-
         const theme = new Theme();
         await theme.getThemes();  // 请求接口
         const themeA = await theme.getHomeLocationA();
-        const themeE = await theme.getHomeLocationE();
-
-
-
         const bannerB = await Banner.getHomeLocationB();
         const gridC = await Category.getHomeGridCategoryLocationC();
         const activityD = await Activity.getHomeActivityLocationD();
+        const themeE = await theme.getHomeLocationE();
+        const themeESpuList = await Theme.getHomeLocationESpu();
 
         this.setData({
             themeA: themeA,
@@ -55,8 +43,7 @@ Page({
             gridC: gridC,
             activityD: activityD,
             themeE: themeE,
-            // themeF: themes[2],
-            // themeH: themes[3],
+            themeESpuList: themeESpuList,
         });
     },
 
