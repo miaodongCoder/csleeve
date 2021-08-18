@@ -15,6 +15,7 @@ Page({
         bannerB: [],
         gridC: [],
         activityD: null,
+        themeE: null,
     },
 
     /**
@@ -27,12 +28,20 @@ Page({
     },
 
     async initAllData() {
-        const themes = await Theme.getThemes();
+        // const themes = await Theme.getThemes();
         // find 函数: return 返回一个匹配的条件
-        const themeA = themes.find((theme) => theme.name === 't-1');
+        // const themeA = themes.find((theme) => theme.name === 't-1');
 
-        
+        // const theme = new Theme();
+        // await theme.getThemes(); // 请求接口~
+        // const themeA =  theme.getHomeLocationA();
+        // const themeE =  theme.getHomeLocationE();
 
+
+        const theme = new Theme();
+        await theme.getThemes();  // 请求接口
+        const themeA = await theme.getHomeLocationA();
+        const themeE = await theme.getHomeLocationE();
 
 
 
@@ -45,9 +54,9 @@ Page({
             bannerB: bannerB,
             gridC: gridC,
             activityD: activityD,
-            themeE: themes[1],
-            themeF: themes[2],
-            themeH: themes[3],
+            themeE: themeE,
+            // themeF: themes[2],
+            // themeH: themes[3],
         });
     },
 

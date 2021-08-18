@@ -5,16 +5,45 @@ import { Http } from "../utils/http";
  * 
  */
 export class Theme {
-    static locationA = 't-1';
-    static locationE = 't-2';
-    static locationF = 't-3';
-    static locationH = 't-4';
-    static async getThemes() {
+    locationA = 't-1';
+    locationE = 't-2';
+    locationF = 't-3';
+    locationH = 't-4';
+    themes = [];
+
+    async getThemes() {
+        const names = `${this.locationA},${this.locationE},${this.locationF},${this.locationH}`;
+        console.log('names = ' + names);
         const result = await Http.request({
             url: 'theme/by/names',
-            data: { names: `${this.locationA},${this.locationE},${this.locationF},${this.locationH}` },
+            data: { names: names }
         });
-        return result.data;
+        this.themes = result.data;
+    }
+
+    async getHomeLocationA() {
+        return this.findDataWithLocation(this.locationA);
+    }
+
+    async getHomeLocationE() {
+        return this.findDataWithLocation(this.locationE);
+    }
+
+    async getHomeLocationF() {
+        return this.findDataWithLocation(this.locationF);
+    }
+
+    async getHomeLocationH() {
+        return this.findDataWithLocation(this.locationH);
+    }
+
+    /**
+     * 公共方法:
+     * @param param 遴选条件
+     * @returns 返回遴选后的数据
+     */
+    async findDataWithLocation(param) {
+        return this.themes.find(theme => { return theme.name === param });
     }
 }
 
