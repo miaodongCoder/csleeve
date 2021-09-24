@@ -14,5 +14,6 @@
     <s-category-grid grid="{{gridC}}"></s-category-grid>
     <!-- 4.优惠券图片 -->
     <image class="activity" src="{{activityD.entrance_img}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
-    
+    <!-- 5.横向滚动视图 -->
+    <s-spu-scroll wx:if="{{themeE.online}}" theme="{{themeE}}" spu-list="{{themeESpuList}}"></s-spu-scroll>
 </view>

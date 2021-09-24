@@ -1,5 +1,5 @@
 /**app.wxss**/
-
+/* page 是一个标签元素 , 不是一个 class */
 page {
     background-color: #f5f5f5;
 }

@@ -48,6 +48,8 @@ export class Theme {
         return Theme.getThemeSpuByNames(Theme.locationE);
     }
 
+    // 获取带有 SPU 信息的主题数据:
+    // 数据是否会保存状态 是就用非静态 , 否就用静态static , 要从面向对象的本质去考虑问题;
     static async getThemeSpuByNames (name) {
         const result = await Http.request({
             url: `theme/name/${name}/with_spu`,

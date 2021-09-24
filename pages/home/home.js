@@ -16,6 +16,7 @@ Page({
         gridC: [],
         activityD: null,
         themeE: null,
+        themeESpuList: [],
     },
 
     /**

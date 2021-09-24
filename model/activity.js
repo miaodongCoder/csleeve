@@ -6,9 +6,10 @@ import { Http } from "../utils/http";
  * 首页获取 entrance_img 图片即可
  */
 export class Activity {
+    static locationD = 'a-2';
     static async getHomeActivityLocationD () {
         const result = await Http.request({
-            url: 'activity/name/a-2',
+            url: `activity/name/${Activity.locationD}`
         });
         return result.data;
     }
