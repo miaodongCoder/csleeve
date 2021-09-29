@@ -18,6 +18,7 @@ Page({
         themeE: null,
         themeESpu: null,
         themeF: null,
+        bannerG : null,
         themeH: null,
     },
 
@@ -33,14 +34,15 @@ Page({
     async initAllData() {
         const theme = new Theme();
         await theme.getThemes();  // 请求接口
-        const themeA = await theme.getHomeLocationA();
-        const bannerB = await Banner.getHomeLocationB();
-        const gridC = await Category.getHomeGridCategoryLocationC();
+        const themeA    = await theme.getHomeLocationA();
+        const bannerB   = await Banner.getHomeLocationB();
+        const gridC     = await Category.getHomeGridCategoryLocationC();
         const activityD = await Activity.getHomeActivityLocationD();
-        const themeE = await theme.getHomeLocationE();
+        const themeE    = await theme.getHomeLocationE();
         const themeESpu = await Theme.getHomeLocationESpu();
-        const themeF = await theme.getHomeLocationF();
-        const themeH = await theme.getHomeLocationH();
+        const themeF    = await theme.getHomeLocationF();
+        const bannerG   = await Banner.getHomeLocationG();
+        const themeH    = await theme.getHomeLocationH();
 
         this.setData({
             themeA: themeA,
@@ -50,6 +52,7 @@ Page({
             themeE: themeE,
             themeESpu: themeESpu,
             themeF: themeF,
+            bannerG : bannerG,
             themeH: themeH,
         });
     },

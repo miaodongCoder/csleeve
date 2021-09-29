@@ -1,0 +1,17 @@
+<view class="container">
+    <!--  热卖榜单头图  -->
+    <image class="title" src="{{banner.img}}"></image>
+    <view class="inner-container">
+        <view hover-class="rect-hover" hover-stay-time="100">
+            <image class="left" src="{{left.img}}"></image>
+        </view>
+        <view class="right-container">
+            <view hover-class="rect-right-hover" hover-stay-time="100">
+                <image class="right-size" src="{{rightTop.img}}"></image>
+            </view>
+            <view hover-class="rect-right-hover" hover-stay-time="100">
+                <image class="right-size" src="{{rightBottom.img}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

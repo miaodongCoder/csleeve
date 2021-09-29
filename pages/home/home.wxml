@@ -16,6 +16,15 @@
     <image class="activity" src="{{activityD.entrance_img}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
     <!-- 5.横向滚动视图 -->
     <s-spu-scroll l-class="spu-scroll" theme="{{themeE}}" spuList="{{themeESpu.spu_list}}" wx:if="{{themeE.online}}"></s-spu-scroll>
-    <!--  6.图片  -->
+    <!-- 6.每周上新图片 -->
     <image src="{{themeF.entrance_img}}" class="quality"></image>
+    <!-- 7.热销商品 Banner -->
+    <s-hot-list banner="{{bannerG}}"></s-hot-list>
+    <!--  8.时尚出街图片 -->
+    <image class="fashion" src="{{themeH.entrance_img}}"></image>
+    <!-- 长滚动列表: -->
+
+
+
+
 </view>
