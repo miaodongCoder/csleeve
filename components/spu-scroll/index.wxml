@@ -1,2 +1,19 @@
-<!--components/spu-scroll/index.wxml-->
-<text>components/spu-scroll/index.wxml</text>
+<!-- 导入 filter 类库 , 使用 subString 方法! -->
+<wxs src="/miniprogram_npm/lin-ui/filter/string.wxs" module="str"></wxs>
+<view class="container l-class">
+    <image class="title" src="{{theme.title_img}}"></image>
+    <scroll-view class="scroll-view" enable-flex scroll-x scroll-y="false">
+        <block wx:for="{{spuList}}" wx:key="key">
+            <!-- Cell -->
+            <view class="spu-container">
+                <image class="spu-img" src="{{item.img}}"></image>
+                <text class="spu-text">{{item.title.length >= 9 ? (str.substring(item.title , 0 , 8) + '...') : item.title}}</text>
+                <l-price value="{{item.price}}"
+                         color="#157658"
+                         l-unit-class="price-unit"
+                         l-value-class="price-value"></l-price>
+            </view>
+        </block>
+    </scroll-view>
+</view>
+

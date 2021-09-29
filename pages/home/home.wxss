@@ -18,7 +18,7 @@
 .activity {
     width: 100%;
     height: 310rpx;
-    margin-top: 20rpx;/** 与上面六宫格的间距是 20rpx **/
+    margin-top: 20rpx; /** 与上面六宫格的间距是 20rpx **/
     display: flex;
 }
 
@@ -27,3 +27,15 @@
     height: 360rpx;
 }
 
+/* 通过外部样式类的形式传递到组件内部: */
+.spu-scroll {
+    margin-top: 20rpx;
+}
+
+.quality {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    width: 100%;
+    height: 880rpx;
+    display: flex;
+}

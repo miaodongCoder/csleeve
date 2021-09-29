@@ -31,6 +31,14 @@ export class Theme {
         return this.findDataWithLocation(Theme.locationE);
     }
 
+    async getHomeLocationF() {
+        return this.findDataWithLocation(Theme.locationF);
+    }
+
+    async getHomeLocationH() {
+        return this.findDataWithLocation(Theme.locationH);
+    }
+
     /**
      * 公共方法:
      * @param param 遴选条件

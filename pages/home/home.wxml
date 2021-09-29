@@ -15,5 +15,7 @@
     <!-- 4.优惠券图片 -->
     <image class="activity" src="{{activityD.entrance_img}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
     <!-- 5.横向滚动视图 -->
-    <s-spu-scroll wx:if="{{themeE.online}}" theme="{{themeE}}" spu-list="{{themeESpuList}}"></s-spu-scroll>
+    <s-spu-scroll l-class="spu-scroll" theme="{{themeE}}" spuList="{{themeESpu.spu_list}}" wx:if="{{themeE.online}}"></s-spu-scroll>
+    <!--  6.图片  -->
+    <image src="{{themeF.entrance_img}}" class="quality"></image>
 </view>

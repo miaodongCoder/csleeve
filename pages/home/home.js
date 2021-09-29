@@ -16,7 +16,9 @@ Page({
         gridC: [],
         activityD: null,
         themeE: null,
-        themeESpuList: [],
+        themeESpu: null,
+        themeF: null,
+        themeH: null,
     },
 
     /**
@@ -36,7 +38,9 @@ Page({
         const gridC = await Category.getHomeGridCategoryLocationC();
         const activityD = await Activity.getHomeActivityLocationD();
         const themeE = await theme.getHomeLocationE();
-        const themeESpuList = await Theme.getHomeLocationESpu();
+        const themeESpu = await Theme.getHomeLocationESpu();
+        const themeF = await theme.getHomeLocationF();
+        const themeH = await theme.getHomeLocationH();
 
         this.setData({
             themeA: themeA,
@@ -44,7 +48,9 @@ Page({
             gridC: gridC,
             activityD: activityD,
             themeE: themeE,
-            themeESpuList: themeESpuList,
+            themeESpu: themeESpu,
+            themeF: themeF,
+            themeH: themeH,
         });
     },
 
