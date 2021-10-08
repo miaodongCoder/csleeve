@@ -22,7 +22,14 @@
     <s-hot-list banner="{{bannerG}}"></s-hot-list>
     <!--  8.时尚出街图片 -->
     <image class="fashion" src="{{themeH.entrance_img}}"></image>
-    <!-- 长滚动列表: -->
+    <!-- 为你推荐图片 -->
+    <view class="spu-bottom">
+        <image class="title-spu-bottom" src="/images/home/title@interest.png"></image>
+    </view>
+    <!-- 瀑布流 => 自定义组件抽象节点 -->
+    <l-water-flow generic:l-water-flow-item="">
+
+    </l-water-flow>
 
 
 

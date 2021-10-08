@@ -57,6 +57,13 @@ Page({
         });
     },
 
+    /**
+     * 获取底部 spu 瀑布流列表数据:
+     * */
+    async initBottomSpuList () {
+
+    },
+
     onPullDownRefresh: function () {
 
     },

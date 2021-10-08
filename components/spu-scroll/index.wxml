@@ -11,7 +11,7 @@
                 <l-price value="{{item.price}}"
                          color="#157658"
                          l-unit-class="price-unit"
-                         l-value-class="price-value"></l-price>
+                         l-value-class="price-value"></l-price>fff
             </view>
         </block>
     </scroll-view>
